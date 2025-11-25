@@ -1,28 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Andromeda Plumbing & Heating</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>About | Andromeda Plumbing and Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn about Andromeda Plumbing and Heating, a locally owned plumbing and heating company serving Edmonton, AB with honest, professional service." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <img src="img/Andromeda.jpg" class="logo">
-  <h1>About Us</h1>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
+        <div class="logo-text">
+          <span>ANDROMEDA</span>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <span class="nav-phone">
+        <a href="tel:+1-780-782-2757">780-782-2757</a>
+      </span>
+      <span class="nav-tag">Edmonton, AB</span>
+      <a href="tel:+1-780-782-2757" class="btn-nav-call">Call Now</a>
+    </div>
+  </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="gallery.html">Our Work</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<main>
+  <section class="section alt">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-kicker">About</div>
+        <h1 class="section-title">Your local plumbing &amp; heating partner</h1>
+        <p class="section-subtitle">
+          Andromeda Plumbing and Heating is a small, owner-operated company serving Edmonton, AB. The focus is simple: do the job right, be honest with people and stand behind the work.
+        </p>
+      </header>
 
-<section>
-<h2>Who We Are</h2>
-<p>You can edit this section later to describe your company, experience, values, and history.</p>
-</section>
+      <div class="columns">
+        <div class="card">
+          <h2>Our approach</h2>
+          <p>
+            When you book a call with Andromeda, you’re dealing directly with the person who will show up at your door — not a call centre or a rotating cast of strangers. That means clear communication and accountability from start to finish.
+          </p>
+          <p>
+            We take the time to explain what’s going on, show you the options and answer your questions. You’ll know the price before work begins, and we’ll never pressure you into upgrades you don’t actually need.
+          </p>
+          <ul class="list-check">
+            <li>Licensed and insured for plumbing and heating work.</li>
+            <li>Code-compliant installations with permits where required.</li>
+            <li>Respect for your home, flooring and personal space.</li>
+          </ul>
+        </div>
 
+        <div class="card">
+          <h3>Why homeowners choose Andromeda</h3>
+          <ul class="list-check">
+            <li><strong>Straightforward advice.</strong> We’ll tell you if a repair makes sense or if it’s better to replace equipment.</li>
+            <li><strong>Clean, organized work.</strong> Drop sheets, shoe covers and tidy work areas are standard.</li>
+            <li><strong>Respect for your time.</strong> We provide realistic arrival windows and keep you updated if something changes.</li>
+            <li><strong>Local knowledge.</strong> Experience with Edmonton’s housing stock, older neighbourhoods and winter conditions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Serving Edmonton &amp; nearby communities</h2>
+        <p>
+          Based in Edmonton, AB, Andromeda Plumbing and Heating works with homeowners, landlords and small businesses across the city and select surrounding areas. If you’re not sure whether you’re in the service area, just call and ask — we’re happy to let you know.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+1-780-782-2757" class="btn-primary">Call 780-782-2757</a>
+          <a href="contact.html" class="btn-secondary">Send a message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <strong>Andromeda Plumbing and Heating</strong>
+      <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
+      <span>Edmonton, Alberta</span>
+      <span><a href="mailto:GeraldLevangie@gmail.com">GeraldLevangie@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
