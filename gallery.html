@@ -1,28 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Work - Andromeda Plumbing & Heating</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Gallery | Andromeda Plumbing and Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project gallery for Andromeda Plumbing and Heating showing examples of work completed in Edmonton, AB." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <img src="img/Andromeda.jpg" class="logo">
-  <h1>Our Work</h1>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
+        <div class="logo-text">
+          <span>ANDROMEDA</span>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <span class="nav-phone">
+        <a href="tel:+1-780-782-2757">780-782-2757</a>
+      </span>
+      <span class="nav-tag">Edmonton, AB</span>
+      <a href="tel:+1-780-782-2757" class="btn-nav-call">Call Now</a>
+    </div>
+  </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="gallery.html">Our Work</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<main>
+  <section class="section alt">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-kicker">Gallery</div>
+        <h1 class="section-title">Examples of our work</h1>
+        <p class="section-subtitle">
+          A small selection of projects to give you a feel for the type of work Andromeda Plumbing and Heating delivers in Edmonton and surrounding areas.
+        </p>
+      </header>
 
-<section>
-<h2>Project Gallery</h2>
-<p>You can add project images here later.</p>
-</section>
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Clean boiler and piping install</strong>
+            <p>Neatly routed piping and labelled valves for easier future maintenance and diagnostics.</p>
+          </div>
+        </article>
 
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Bathroom renovation rough-in</strong>
+            <p>Plumbing rough-in completed and pressure tested before walls were closed up on a full basement bathroom renovation.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Hot water tank replacement</strong>
+            <p>Old leaking tank removed and replaced with a properly sized, code-compliant unit including new venting and shut-offs.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Kitchen plumbing upgrades</strong>
+            <p>New sink, faucet, and under-cabinet plumbing in a refreshed kitchen, with shut-off valves accessible for future service.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Drain clearing &amp; clean-out</strong>
+            <p>Cleared a backed-up main line, installed an accessible clean-out and provided recommendations to prevent repeat issues.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <div class="gallery-img"></div>
+          <div class="gallery-body">
+            <strong>Mechanical room tidy-up</strong>
+            <p>Re-organized older piping and added isolation valves to make future service safer and faster.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="card" style="margin-top:1.8rem;">
+        <h2>Add your own photos later</h2>
+        <p>
+          When you’re ready, you can replace these placeholders with real photos from your projects. Name them something like
+          <code>gallery-1.jpg</code>, <code>gallery-2.jpg</code> and update the HTML to point to your images.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <strong>Andromeda Plumbing and Heating</strong>
+      <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
+      <span>Edmonton, Alberta</span>
+      <span><a href="mailto:GeraldLevangie@gmail.com">GeraldLevangie@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
