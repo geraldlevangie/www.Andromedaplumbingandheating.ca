@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <title>Gallery | Andromeda Plumbing and Heating</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Project gallery for Andromeda Plumbing and Heating showing examples of work completed in Edmonton, AB." />
+  <meta name="description" content="Gallery of past plumbing and heating work by Andromeda Plumbing and Heating." />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container nav-bar">
+<header>
+  <div class="container nav">
     <div class="nav-left">
       <a href="index.html" class="logo-wrap">
         <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
-        <div class="logo-text">
+        <div class="brand-text">
           <span>ANDROMEDA</span>
           <span>PLUMBING &amp; HEATING</span>
         </div>
@@ -28,86 +30,49 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="nav-right">
-      <span class="nav-phone">
-        <a href="tel:+1-780-782-2757">780-782-2757</a>
-      </span>
-      <span class="nav-tag">Edmonton, AB</span>
-      <a href="tel:+1-780-782-2757" class="btn-nav-call">Call Now</a>
+    <div class="nav-contact">
+      <span class="nav-phone"><a href="tel:+17807822757">780-782-2757</a></span>
+      <span class="badge-24-7">Edmonton, AB</span>
+      <a href="tel:+17807822757" class="nav-cta">Call Now</a>
     </div>
   </div>
 </header>
 
 <main>
-  <section class="section alt">
+
+  <section class="section">
     <div class="container">
+
       <header class="section-header">
         <div class="section-kicker">Gallery</div>
-        <h1 class="section-title">Examples of our work</h1>
+        <h1 class="section-title">Recent Work</h1>
         <p class="section-subtitle">
-          A small selection of projects to give you a feel for the type of work Andromeda Plumbing and Heating delivers in Edmonton and surrounding areas.
+          A look at some of our plumbing and heating projects across Edmonton.
         </p>
       </header>
 
-      <div class="gallery-grid">
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Clean boiler and piping install</strong>
-            <p>Neatly routed piping and labelled valves for easier future maintenance and diagnostics.</p>
-          </div>
-        </article>
+      <div class="services-grid">
 
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Bathroom renovation rough-in</strong>
-            <p>Plumbing rough-in completed and pressure tested before walls were closed up on a full basement bathroom renovation.</p>
-          </div>
-        </article>
+        <div class="service-card">
+          <h3 class="service-title">Hot Water Tank Install</h3>
+          <p class="service-body">Complete replacement with upgraded fittings.</p>
+        </div>
 
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Hot water tank replacement</strong>
-            <p>Old leaking tank removed and replaced with a properly sized, code-compliant unit including new venting and shut-offs.</p>
-          </div>
-        </article>
+        <div class="service-card">
+          <h3 class="service-title">Drain Line Repair</h3>
+          <p class="service-body">Cleared and repaired a collapsed residential line.</p>
+        </div>
 
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Kitchen plumbing upgrades</strong>
-            <p>New sink, faucet, and under-cabinet plumbing in a refreshed kitchen, with shut-off valves accessible for future service.</p>
-          </div>
-        </article>
+        <div class="service-card">
+          <h3 class="service-title">Furnace Diagnostic</h3>
+          <p class="service-body">No-heat service call & successful repair.</p>
+        </div>
 
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Drain clearing &amp; clean-out</strong>
-            <p>Cleared a backed-up main line, installed an accessible clean-out and provided recommendations to prevent repeat issues.</p>
-          </div>
-        </article>
-
-        <article class="gallery-item">
-          <div class="gallery-img"></div>
-          <div class="gallery-body">
-            <strong>Mechanical room tidy-up</strong>
-            <p>Re-organized older piping and added isolation valves to make future service safer and faster.</p>
-          </div>
-        </article>
       </div>
 
-      <div class="card" style="margin-top:1.8rem;">
-        <h2>Add your own photos later</h2>
-        <p>
-          When you’re ready, you can replace these placeholders with real photos from your projects. Name them something like
-          <code>gallery-1.jpg</code>, <code>gallery-2.jpg</code> and update the HTML to point to your images.
-        </p>
-      </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
@@ -116,6 +81,7 @@
       <strong>Andromeda Plumbing and Heating</strong>
       <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
     </div>
+
     <div class="footer-meta">
       <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
       <span>Edmonton, Alberta</span>
@@ -127,5 +93,6 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
