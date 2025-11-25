@@ -1,38 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us - Andromeda Plumbing & Heating</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Contact | Andromeda Plumbing and Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact Andromeda Plumbing and Heating in Edmonton, AB for plumbing and heating service, quotes and emergency support." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
-  <img src="img/Andromeda.jpg" class="logo">
-  <h1>Contact Us</h1>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <div class="nav-left">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
+        <div class="logo-text">
+          <span>ANDROMEDA</span>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <span class="nav-phone">
+        <a href="tel:+1-780-782-2757">780-782-2757</a>
+      </span>
+      <span class="nav-tag">Edmonton, AB</span>
+      <a href="tel:+1-780-782-2757" class="btn-nav-call">Call Now</a>
+    </div>
+  </div>
 </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="gallery.html">Our Work</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<main>
+  <section class="section alt">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-kicker">Contact</div>
+        <h1 class="section-title">Reach Andromeda Plumbing and Heating</h1>
+        <p class="section-subtitle">
+          For urgent issues, calling is always the fastest way to reach us. For quotes and non-urgent work, use the message form and we’ll follow up as soon as we can.
+        </p>
+      </header>
 
-<section>
-<h2>Get in Touch</h2>
-<p>Phone: 780-782-2757</p>
+      <div class="contact-grid">
+        <div class="card">
+          <h2>Request a call or quote</h2>
+          <p>
+            This simple form can be wired up to a service like Formspree or Netlify Forms. For now, it’s a visual placeholder so your site looks complete.
+          </p>
 
-<form>
-  <label>Name:</label>
-  <input type="text" required>
-  <label>Email:</label>
-  <input type="email" required>
-  <label>Message:</label>
-  <textarea required></textarea>
-  <button type="submit">Send</button>
-</form>
-</section>
+          <form>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" placeholder="Best number to reach you" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="address">Service address (optional)</label>
+                <input id="address" type="text" placeholder="Street, area, city" />
+              </div>
+              <div class="field">
+                <label for="details">How can we help?</label>
+                <textarea id="details" placeholder="Tell us briefly about the issue or project"></textarea>
+              </div>
+            </div>
 
+            <button type="button" class="btn-primary">Send (example only)</button>
+            <p class="contact-note">
+              To make this form email you directly, you can connect it to a free service such as Formspree and update the form’s <code>action</code> attribute.
+            </p>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Direct contact details</h3>
+          <p><strong>Phone:</strong> <a href="tel:+1-780-782-2757">780-782-2757</a></p>
+          <p><strong>Email:</strong> <a href="mailto:GeraldLevangie@gmail.com">GeraldLevangie@gmail.com</a></p>
+          <p><strong>Location:</strong> Edmonton, Alberta and surrounding area.</p>
+
+          <h3>Hours</h3>
+          <p>
+            Standard hours: Monday–Friday, 8:00am – 5:00pm<br />
+            Emergency calls: 24/7 availability for urgent issues such as no heat, active leaks and sewer backups.
+          </p>
+
+          <h3>Good to know before you call</h3>
+          <ul class="list-check">
+            <li>Type of issue (no heat, leak, clogged drain, renovation, etc.).</li>
+            <li>How long it has been happening and any changes you’ve noticed.</li>
+            <li>Photos of the problem can help us come prepared.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <strong>Andromeda Plumbing and Heating</strong>
+      <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
+      <span>Edmonton, Alberta</span>
+      <span><a href="mailto:GeraldLevangie@gmail.com">GeraldLevangie@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
