@@ -2,1177 +2,255 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Andromeda Plumbing and Heating | Professional Plumbing And Heating Services</title>
+  <title>Andromeda Plumbing and Heating | Edmonton AB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Andromeda Plumbing and Heating provides fast, professional plumbing and heating services for homes and businesses. Emergency service available." />
+  <meta name="description" content="Andromeda Plumbing and Heating provides professional plumbing and heating services in Edmonton, AB. Emergency service, honest pricing, and clean, code-compliant work." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <style>
-    :root {
-      --primary-blue: #005b96;
-      --primary-red: #e53935;
-      --dark: #0f172a;
-      --light: #f5f7fb;
-      --accent: #0ea5e9;
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --radius-lg: 16px;
-      --radius-xl: 24px;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text-main);
-      background: #ffffff;
-      line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Layout helpers */
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-  <header>
-  <div class="container nav">
+<header class="site-header">
+  <div class="container nav-bar">
     <div class="nav-left">
-      <a href="#top" class="logo-wrap">
-        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" style="height:60px;">
-        <div class="brand-text">
+      <a href="index.html" class="logo-wrap">
+        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
+        <div class="logo-text">
           <span>ANDROMEDA</span>
-          <span>PLUMBING & HEATING</span>
+          <span>PLUMBING &amp; HEATING</span>
         </div>
       </a>
     </div>
 
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#areas">Service Area</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="nav-contact">
+    <div class="nav-right">
       <span class="nav-phone">
         <a href="tel:+1-780-782-2757">780-782-2757</a>
       </span>
-
-      <span class="badge-24-7">Edmonton, AB</span>
-
-      <a class="nav-cta" href="tel:+1-780-782-2757">Call Now</a>
+      <span class="nav-tag">Edmonton, AB</span>
+      <a href="tel:+1-780-782-2757" class="btn-nav-call">Call Now</a>
     </div>
   </div>
 </header>
-    }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.6rem 0;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .logo-wrap img {
-      height: 52px;
-      width: auto;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-text span:first-child {
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      font-size: 0.85rem;
-    }
-
-    .brand-text span:last-child {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      letter-spacing: 0.16em;
-    }
-
-    .nav-links {
-      display: none;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      position: relative;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-blue);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -0.4rem;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--primary-red), var(--primary-blue));
-      transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.15rem;
-      font-size: 0.8rem;
-    }
-
-    .nav-phone {
-      font-weight: 700;
-      color: var(--primary-blue);
-    }
-
-    .badge-24-7 {
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-    }
-
-    .nav-cta {
-      margin-top: 0.1rem;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);
-      border: none;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-
-    /* Hero */
-    .hero {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(248, 113, 113, 0.16), transparent 55%),
-                  #ffffff;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.2rem;
-      padding: 2.5rem 0 3rem;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--primary-blue);
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-title {
-      font-size: 2rem;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.75rem;
-      color: var(--dark);
-    }
-
-    .hero-title span {
-      color: var(--primary-red);
-    }
-
-    .hero-subtitle {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      max-width: 32rem;
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-highlight {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.04);
-      font-size: 0.75rem;
-      margin-bottom: 1.4rem;
-      color: var(--text-muted);
-    }
-
-    .hero-highlight strong {
-      color: var(--primary-blue);
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .btn-primary {
-      padding: 0.8rem 1.4rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-size: 0.94rem;
-      font-weight: 600;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
-
-    .btn-secondary {
-      padding: 0.8rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(255, 255, 255, 0.8);
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--text-main);
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--text-muted);
-    }
-
-    .hero-meta span strong {
-      color: var(--primary-blue);
-    }
-
-    .hero-card {
-      background: rgba(15, 23, 42, 0.97);
-      border-radius: var(--radius-xl);
-      padding: 1.8rem 1.5rem;
-      color: #e5e7eb;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .hero-card h2 {
-      font-size: 1.1rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .hero-card ul {
-      list-style: none;
-      margin: 0.6rem 0 1.1rem;
-      font-size: 0.88rem;
-    }
-
-    .hero-card li {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 0.35rem;
-    }
-
-    .hero-bullet-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--primary-red), var(--primary-blue));
-    }
-
-    .hero-card-footer {
-      border-top: 1px solid rgba(55, 65, 81, 0.9);
-      padding-top: 0.9rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.75rem;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-card-footer span strong {
-      color: #f97373;
-    }
-
-    .hero-card-badge {
-      padding: 0.25rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    /* Sections */
-    section {
-      padding: 3rem 0;
-    }
-
-    section:nth-of-type(even) {
-      background: var(--light);
-    }
-
-    .section-header {
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .section-kicker {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--primary-blue);
-      font-weight: 700;
-      margin-bottom: 0.4rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 0.4rem;
-      color: var(--dark);
-    }
-
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      max-width: 36rem;
-      margin: 0 auto;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.4rem;
-    }
-
-    .service-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 1.4rem 1.3rem;
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .service-title {
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-      font-size: 1rem;
-    }
-
-    .service-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--text-muted);
-      margin-bottom: 0.45rem;
-    }
-
-    .service-body {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-bottom: 0.7rem;
-    }
-
-    .service-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.74rem;
-    }
-
-    .service-tags span {
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.06);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-    }
-
-    /* Why choose us */
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1.1fr;
-      gap: 1.8rem;
-      align-items: start;
-    }
-
-    .why-list {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.1rem;
-    }
-
-    .why-item {
-      display: flex;
-      gap: 0.7rem;
-    }
-
-    .why-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--primary-blue);
-    }
-
-    .why-item h3 {
-      font-size: 0.98rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .why-item p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-    }
-
-    .stats-card {
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #020617, #0b1120);
-      color: #e5e7eb;
-      padding: 1.6rem 1.5rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4rem;
-      margin: 0.9rem 0 1.1rem;
-    }
-
-    .stat {
-      min-width: 90px;
-    }
-
-    .stat strong {
-      font-size: 1.2rem;
-      display: block;
-    }
-
-    .stat span {
-      font-size: 0.82rem;
-      color: #9ca3af;
-    }
-
-    .stats-note {
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
-
-    /* Service areas */
-    .areas-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.4rem;
-    }
-
-    .area-card {
-      background: #fff;
-      border-radius: var(--radius-lg);
-      padding: 1.3rem 1.2rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .area-card h3 {
-      font-size: 0.96rem;
-      margin-bottom: 0.25rem;
-      color: var(--dark);
-    }
-
-    .area-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-    }
-
-    .area-badges span {
-      padding: 0.24rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.8rem;
-      align-items: start;
-    }
-
-    .contact-card,
-    .contact-details {
-      background: #fff;
-      border-radius: var(--radius-xl);
-      padding: 1.6rem 1.4rem;
-      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.12);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .contact-card h3,
-    .contact-details h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contact-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-
-    .contact-fields {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
-      margin-bottom: 1.1rem;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .field label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    .field input,
-    .field textarea {
-      padding: 0.65rem 0.7rem;
-      border-radius: 0.6rem;
-      border: 1px solid rgba(148, 163, 184, 0.9);
-      font-size: 0.88rem;
-      outline: none;
-    }
-
-    .field input:focus,
-    .field textarea:focus {
-      border-color: var(--primary-blue);
-      box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.3);
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    .contact-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 0.4rem;
-    }
-
-    .contact-details dl {
-      font-size: 0.9rem;
-    }
-
-    .contact-details dt {
-      font-weight: 600;
-      margin-top: 0.6rem;
-    }
-
-    .contact-details dd {
-      margin-left: 0;
-      color: var(--text-muted);
-    }
-
-    .contact-details a {
-      color: var(--primary-blue);
-      font-weight: 600;
-    }
-
-    .contact-tags {
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-    }
-
-    .contact-tags span {
-      padding: 0.25rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(59, 130, 246, 0.06);
-      border: 1px solid rgba(148, 163, 184, 0.8);
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid rgba(148, 163, 184, 0.5);
-      background: #020617;
-      color: #9ca3af;
-      padding: 1.8rem 0 1.4rem;
-      font-size: 0.8rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-
-    .footer-main {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .footer-main strong {
-      color: #e5e7eb;
-    }
-
-    .footer-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      font-size: 0.78rem;
-    }
-
-    .footer-meta span {
-      position: relative;
-      padding-right: 0.8rem;
-    }
-
-    .footer-meta span:not(:last-child)::after {
-      content: "•";
-      position: absolute;
-      right: 0.2rem;
-      color: #4b5563;
-    }
-
-    .footer-meta a {
-      color: #e5e7eb;
-    }
-
-    /* Mobile tweaks */
-    @media (max-width: 767px) {
-      .nav-contact {
-        display: none;
-      }
-
-      .hero-inner {
-        padding-top: 1.8rem;
-      }
-    }
-
-    /* Tablet / Desktop */
-    @media (min-width: 768px) {
-      .nav-links {
-        display: flex;
-      }
-
-      .hero-inner {
-        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
-        padding: 3.1rem 0 3.6rem;
-      }
-
-      .hero-title {
-        font-size: 2.4rem;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .why-grid {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
-      }
-
-      .areas-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .contact-grid {
-        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
-      }
-
-      .footer-inner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .footer-main {
-        flex-direction: row;
-        align-items: center;
-        gap: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="nav-left">
-        <a href="#top" class="logo-wrap">
-          <img src="assets/andromeda-logo.png" alt="Andromeda Plumbing and Heating logo" />
-          <div class="brand-text">
-            <span>ANDROMEDA</span>
-            <span>PLUMBING &amp; HEATING</span>
-          </div>
-        </a>
-      </div>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why">Why Andromeda</a>
-        <a href="#areas">Service Areas</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-contact">
-        <span class="nav-phone"><a href="tel:+1-902-555-1234">(+1) 902-555-1234</a></span>
-        <span class="badge-24-7">Emergency Service</span>
-        <a class="nav-cta" href="tel:+1-902-555-1234">Call Now</a>
-      </div>
-    </div>
-  </header>
-
+<main>
   <!-- Hero -->
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <div>
-          <div class="hero-kicker">Plumbing &amp; Heating You Can Trust</div>
-          <h1 class="hero-title">
-            Fast, professional <span>plumbing &amp; heating</span> for your home or business.
-          </h1>
-          <p class="hero-subtitle">
-            From emergency leaks and frozen pipes to new furnace installs, Andromeda Plumbing and Heating delivers clean, code-compliant work with clear communication and upfront pricing.
-          </p>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="hero-kicker">Plumbing &amp; heating in Edmonton</div>
+        <h1 class="hero-title">
+          Professional <span>plumbing &amp; heating</span> for Edmonton homes and businesses.
+        </h1>
+        <p class="hero-subtitle">
+          From emergency leaks and frozen lines to furnace repairs and hot water tank replacements, Andromeda Plumbing and Heating delivers clean, code-compliant work with respectful service.
+        </p>
 
-          <div class="hero-highlight">
-            <strong>Same-day appointments</strong> · Licensed &amp; insured · Respect for your home
-          </div>
-
-          <div class="hero-actions">
-            <a href="tel:+1-902-555-1234" class="btn-primary">Call for Service</a>
-            <a href="#contact" class="btn-secondary">Request a Quote</a>
-          </div>
-
-          <div class="hero-meta">
-            <span><strong>24/7</strong> emergencies</span>
-            <span>Residential &amp; light commercial</span>
-            <span>Serving your local area</span>
-          </div>
+        <div class="hero-highlight">
+          <strong>Locally owned Edmonton company</strong>
+          <span>· Upfront pricing · Licensed &amp; insured</span>
         </div>
 
-        <aside class="hero-card">
-          <h2>Need help right now?</h2>
-          <p style="font-size:0.88rem;color:#d1d5db;">
-            Reach a licensed plumber directly — no call centre, no long hold times.
+        <div class="hero-actions">
+          <a href="tel:+1-780-782-2757" class="btn-primary">Call 780-782-2757</a>
+          <a href="contact.html" class="btn-secondary">Request a quote</a>
+        </div>
+
+        <div class="hero-meta">
+          <span><strong>24/7</strong> emergency line</span>
+          <span>Residential &amp; light commercial</span>
+          <span>Serving Edmonton &amp; area</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h2>Need help right now?</h2>
+        <p>
+          Reach a licensed tradesperson directly — no call centre, no long hold times. We’ll walk you through your options and arrive prepared.
+        </p>
+        <ul>
+          <li><span class="dot"></span><span>Burst or leaking pipes</span></li>
+          <li><span class="dot"></span><span>No heat or furnace issues</span></li>
+          <li><span class="dot"></span><span>Clogged drains &amp; sewer backups</span></li>
+          <li><span class="dot"></span><span>Hot water tank repair &amp; replacement</span></li>
+        </ul>
+        <div class="hero-card-footer">
+          <span>Call <strong>780-782-2757</strong> for priority service in Edmonton.</span>
+          <span class="hero-card-badge">Licensed · Insured · Local</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-kicker">Services</div>
+        <h2 class="section-title">Complete plumbing &amp; heating solutions</h2>
+        <p class="section-subtitle">
+          Whether you need a small repair or a full system upgrade, we provide honest recommendations, quality parts and clean workmanship.
+        </p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-pill">Plumbing repair</div>
+          <h3 class="service-title">Leaks, clogs &amp; fixture repair</h3>
+          <p class="service-body">
+            Repairs for dripping faucets, running toilets, clogged drains and hidden leaks. We diagnose the real cause — not just the symptom.
           </p>
-          <ul>
-            <li>
-              <span class="hero-bullet-dot"></span>
-              <span>Burst &amp; leaking pipes</span>
-            </li>
-            <li>
-              <span class="hero-bullet-dot"></span>
-              <span>No heat / furnace issues</span>
-            </li>
-            <li>
-              <span class="hero-bullet-dot"></span>
-              <span>Clogged drains &amp; sewer backups</span>
-            </li>
-            <li>
-              <span class="hero-bullet-dot"></span>
-              <span>Hot water tank repair &amp; replacement</span>
-            </li>
-          </ul>
-          <div class="hero-card-footer">
-            <span>Call <strong>(+1) 902-555-1234</strong><br />for priority response.</span>
-            <span class="hero-card-badge">Licensed · Insured · Local</span>
+          <div class="service-tags">
+            <span>Leak detection</span>
+            <span>Toilets &amp; faucets</span>
+            <span>Drain clearing</span>
           </div>
-        </aside>
-      </div>
-    </section>
+        </article>
 
-    <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Services</div>
-          <h2 class="section-title">Complete plumbing &amp; heating solutions</h2>
-          <p class="section-subtitle">
-            Whether it’s a small repair or a full system upgrade, Andromeda Plumbing and Heating delivers clean work, quality parts, and honest recommendations.
+        <article class="service-card">
+          <div class="service-pill">Heating</div>
+          <h3 class="service-title">Furnaces &amp; heating systems</h3>
+          <p class="service-body">
+            Troubleshooting and repair for forced-air furnaces and other heating equipment to keep your home comfortable and safe.
           </p>
-        </header>
-
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-pill">Plumbing Repair</div>
-            <h3 class="service-title">Leaks, clogs &amp; fixture repair</h3>
-            <p class="service-body">
-              Fast, tidy repairs for dripping taps, running toilets, clogged drains, hidden leaks and more — so you can get back to normal life quickly.
-            </p>
-            <div class="service-tags">
-              <span>Leak detection</span>
-              <span>Toilets &amp; faucets</span>
-              <span>Drain clearing</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-pill">Heating</div>
-            <h3 class="service-title">Furnaces, boilers &amp; heaters</h3>
-            <p class="service-body">
-              Diagnosis, repair, and replacement for forced-air furnaces, boilers and other heating equipment to keep your home safe and comfortable.
-            </p>
-            <div class="service-tags">
-              <span>No-heat calls</span>
-              <span>Preventative tune-ups</span>
-              <span>New installs</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-pill">Water Heaters</div>
-            <h3 class="service-title">Hot water tank &amp; tankless</h3>
-            <p class="service-body">
-              From emergency tank replacements to new high-efficiency tankless systems, we’ll recommend the right option for your home and budget.
-            </p>
-            <div class="service-tags">
-              <span>Tank replacement</span>
-              <span>Tankless options</span>
-              <span>Code upgrades</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-pill">Renovations</div>
-            <h3 class="service-title">Bathrooms, kitchens &amp; basements</h3>
-            <p class="service-body">
-              Professional rough-in and finish work for remodels and additions — coordinated with your contractor to keep your project on schedule.
-            </p>
-            <div class="service-tags">
-              <span>Code-compliant rough-ins</span>
-              <span>Fixture installs</span>
-              <span>Coordination with trades</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-pill">Emergency</div>
-            <h3 class="service-title">24/7 urgent service</h3>
-            <p class="service-body">
-              When water is where it shouldn’t be — or your heat is out in cold weather — we’ll respond quickly with priority scheduling.
-            </p>
-            <div class="service-tags">
-              <span>Burst pipes</span>
-              <span>Sewer backups</span>
-              <span>No-heat calls</span>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <div class="service-pill">Maintenance</div>
-            <h3 class="service-title">Preventative care</h3>
-            <p class="service-body">
-              Annual maintenance to extend equipment life, improve efficiency, and help you avoid surprise breakdowns and costly damage.
-            </p>
-            <div class="service-tags">
-              <span>System check-ups</span>
-              <span>Safety inspections</span>
-              <span>Property managers</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why choose us -->
-    <section id="why">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Why Andromeda</div>
-          <h2 class="section-title">Professional work, small-company care</h2>
-          <p class="section-subtitle">
-            You’re inviting a tradesperson into your home. We take that seriously — from shoe covers and clean drop sheets to clear explanations and tidy job sites.
-          </p>
-        </header>
-
-        <div class="why-grid">
-          <div class="why-list">
-            <div class="why-item">
-              <div class="why-icon">1</div>
-              <div>
-                <h3>Licensed, insured &amp; code-compliant</h3>
-                <p>
-                  All work is completed to current plumbing and heating codes with permits where required — protecting both your home and your investment.
-                </p>
-              </div>
-            </div>
-
-            <div class="why-item">
-              <div class="why-icon">2</div>
-              <div>
-                <h3>Upfront, no-surprise pricing</h3>
-                <p>
-                  You’ll know the price before work begins. We walk you through your options and never pressure you into upgrades you don’t need.
-                </p>
-              </div>
-            </div>
-
-            <div class="why-item">
-              <div class="why-icon">3</div>
-              <div>
-                <h3>Respect for your home</h3>
-                <p>
-                  We arrive on time, protect floors and work areas, and clean up when we’re done — so the only thing you notice is that everything works again.
-                </p>
-              </div>
-            </div>
-
-            <div class="why-item">
-              <div class="why-icon">4</div>
-              <div>
-                <h3>Local, reliable support</h3>
-                <p>
-                  When you call Andromeda, you’re talking directly to the person who will show up at your door — not a call centre in another province.
-                </p>
-              </div>
-            </div>
+          <div class="service-tags">
+            <span>No-heat calls</span>
+            <span>Maintenance</span>
+            <span>New installs</span>
           </div>
+        </article>
 
-          <aside class="stats-card">
-            <h3>Plumbing &amp; heating you can recommend.</h3>
-            <div class="stats-row">
-              <div class="stat">
-                <strong>5★</strong>
-                <span>Expected service experience</span>
-              </div>
-              <div class="stat">
-                <strong>100%</strong>
-                <span>Workmanship guarantee</span>
-              </div>
-              <div class="stat">
-                <strong>24/7</strong>
-                <span>Emergency response</span>
-              </div>
-            </div>
-            <p class="stats-note">
-              If something doesn’t feel right after a job, we’ll make it right. Our reputation is built on repeat customers and word-of-mouth referrals.
-            </p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service areas -->
-    <section id="areas">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Service Area</div>
-          <h2 class="section-title">Proudly serving your neighbourhood</h2>
-          <p class="section-subtitle">
-            Based locally and focused on reliable, on-time service. Call to confirm availability in your specific area.
+        <article class="service-card">
+          <div class="service-pill">Hot water</div>
+          <h3 class="service-title">Tank &amp; tankless solutions</h3>
+          <p class="service-body">
+            Emergency replacements and planned upgrades for hot water tanks and tankless systems sized properly for your home.
           </p>
-        </header>
-
-        <div class="areas-grid">
-          <article class="area-card">
-            <h3>Primary Service Area</h3>
-            <p>
-              Residential homes, condos and small businesses in the core service region.
-            </p>
-            <div class="area-badges">
-              <span>Local neighbourhoods</span>
-              <span>Downtown &amp; suburbs</span>
-              <span>Commercial units</span>
-            </div>
-          </article>
-
-          <article class="area-card">
-            <h3>Surrounding Communities</h3>
-            <p>
-              Limited availability for out-of-town calls depending on schedule and weather conditions.
-            </p>
-            <div class="area-badges">
-              <span>Rural properties</span>
-              <span>Cottages</span>
-              <span>Rental units</span>
-            </div>
-          </article>
-
-          <article class="area-card">
-            <h3>Property Managers &amp; Realtors</h3>
-            <p>
-              Reliable partner for move-in/move-out checks, quick repairs, and inspection items before closing.
-            </p>
-            <div class="area-badges">
-              <span>Volume scheduling</span>
-              <span>Detailed documentation</span>
-              <span>Priority response</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-kicker">Contact</div>
-          <h2 class="section-title">Ready when you need us</h2>
-          <p class="section-subtitle">
-            Call for urgent issues or send a quick message with a few details about your project. We’ll get back to you as soon as possible.
-          </p>
-        </header>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Request a callback</h3>
-            <p>
-              This simple form can be wired up to your preferred contact tool (email, form service or CRM). For now, it’s a visual placeholder.
-            </p>
-            <form>
-              <div class="contact-fields">
-                <div class="field">
-                  <label for="name">Name</label>
-                  <input id="name" type="text" placeholder="Your name" />
-                </div>
-                <div class="field">
-                  <label for="phone">Phone</label>
-                  <input id="phone" type="tel" placeholder="Best number to reach you" />
-                </div>
-                <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" type="email" placeholder="you@example.com" />
-                </div>
-                <div class="field">
-                  <label for="details">How can we help?</label>
-                  <textarea id="details" placeholder="Tell us briefly about the issue or project"></textarea>
-                </div>
-              </div>
-              <button type="button" class="btn-primary">Send (example only)</button>
-              <p class="contact-note">
-                This form is for design only right now. To make it send to your email, you can connect it to a service like Formspree or Netlify Forms.
-              </p>
-            </form>
+          <div class="service-tags">
+            <span>Tank replacement</span>
+            <span>Tankless options</span>
+            <span>Code upgrades</span>
           </div>
+        </article>
 
-          <aside class="contact-details">
-            <h3>Contact details</h3>
-            <dl>
-              <dt>Phone</dt>
-              <dd><a href="tel:+1-902-555-1234">(+1) 902-555-1234</a></dd>
+        <article class="service-card">
+          <div class="service-pill">Renovations</div>
+          <h3 class="service-title">Bathrooms, kitchens &amp; basements</h3>
+          <p class="service-body">
+            Rough-in and finishing for renovations, additions and basement developments, coordinated with your contractor or designer.
+          </p>
+          <div class="service-tags">
+            <span>Permit-ready</span>
+            <span>Fixture installs</span>
+            <span>Layout advice</span>
+          </div>
+        </article>
 
-              <dt>Email</dt>
-              <dd><a href="mailto:info@andromedaplumbingandheating.ca">info@andromedaplumbingandheating.ca</a></dd>
+        <article class="service-card">
+          <div class="service-pill">Emergency</div>
+          <h3 class="service-title">24/7 emergency response</h3>
+          <p class="service-body">
+            When water is where it shouldn’t be — or your heat is out in winter — we respond as quickly as possible with priority scheduling.
+          </p>
+          <div class="service-tags">
+            <span>Burst pipes</span>
+            <span>Sewer backups</span>
+            <span>No-heat</span>
+          </div>
+        </article>
 
-              <dt>Hours</dt>
-              <dd>Monday–Friday: 8:00am – 5:00pm<br />24/7 emergency service for urgent issues.</dd>
-
-              <dt>Mailing address</dt>
-              <dd>Andromeda Plumbing and Heating<br />Your Street, Your City, Province</dd>
-            </dl>
-
-            <div class="contact-tags">
-              <span>Licensed &amp; insured</span>
-              <span>WSIB / safety-focused</span>
-              <span>Upfront pricing</span>
-              <span>Clean, respectful service</span>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-main">
-        <strong>Andromeda Plumbing and Heating</strong>
-        <span>Professional plumbing &amp; heating services</span>
-      </div>
-      <div class="footer-meta">
-        <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating. All rights reserved.</span>
-        <span>Serving residential &amp; light commercial customers.</span>
-        <span><a href="mailto:info@andromedaplumbingandheating.ca">Request a quote</a></span>
+        <article class="service-card">
+          <div class="service-pill">Maintenance</div>
+          <h3 class="service-title">Preventative care</h3>
+          <p class="service-body">
+            Annual inspections and tune-ups that extend equipment life and help you avoid last-minute breakdowns and property damage.
+          </p>
+          <div class="service-tags">
+            <span>Furnace checks</span>
+            <span>Water heater flush</span>
+            <span>Safety inspections</span>
+          </div>
+        </article>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Auto-update footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- Why choose us -->
+  <section class="section alt">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-kicker">Why Andromeda</div>
+        <h2 class="section-title">Professional work, small-company care</h2>
+        <p class="section-subtitle">
+          We treat every job like it’s in our own home — from drop sheets and shoe covers to clear explanations and tidy job sites.
+        </p>
+      </header>
+
+      <div class="columns">
+        <div class="card">
+          <h2>What you can expect on every visit</h2>
+          <ul class="list-check">
+            <li>Clear communication before, during and after the job.</li>
+            <li>Options explained in plain language with honest pricing.</li>
+            <li>Respect for your time with realistic arrival windows.</li>
+            <li>Work completed to current Edmonton plumbing &amp; gas codes.</li>
+            <li>A clean workspace when we leave — not a mess to deal with.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Serving Edmonton &amp; area</h3>
+          <p>
+            Based in Edmonton, AB and focused on surrounding neighbourhoods and nearby communities. Call to confirm availability for your address.
+          </p>
+          <ul class="list-check">
+            <li>Single-family homes, condos and townhouses.</li>
+            <li>Small commercial spaces and offices.</li>
+            <li>Rental properties for owners and property managers.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>Ready to book or need advice?</h2>
+        <p>
+          Not sure if it’s an emergency, or wondering if a repair is worth it versus replacement? Give us a quick call — we’re happy to talk it through.
+        </p>
+        <div class="hero-actions">
+          <a href="tel:+1-780-782-2757" class="btn-primary">Call 780-782-2757</a>
+          <a href="contact.html" class="btn-secondary">Send a message</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-main">
+      <strong>Andromeda Plumbing and Heating</strong>
+      <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
+      <span>Edmonton, Alberta</span>
+      <span><a href="mailto:GeraldLevangie@gmail.com">GeraldLevangie@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
