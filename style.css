@@ -40,26 +40,9 @@ header {
   top: 0;
   z-index: 50;
 }
-/* Gallery image styling */
-.service-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 0.6rem;
-}
-
-
 
 .nav {
   display: flex;
-   .service-card img {
-  border-radius: 12px;
-  margin-bottom: 0.6rem;
-  width: 100%;
-  height: auto;
-}
-
   align-items: center;
   justify-content: space-between;
   padding: 0.6rem 0;
@@ -290,4 +273,35 @@ header {
   .columns {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* ------------------------------------------------------
+   NEW GALLERY STYLING (clean layout like the preview)
+------------------------------------------------------- */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
 }
