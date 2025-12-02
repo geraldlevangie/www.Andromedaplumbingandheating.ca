@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body class="dark-mode">
 
-<!-- HEADER (SAME ON ALL PAGES) -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="container header-inner">
 
@@ -21,7 +21,7 @@
     </nav>
 
     <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating">
+      <img src="assets/Andromeda logo 1.png" alt="Andromeda Plumbing & Heating" />
       <div class="brand-text">
         <span>ANDROMEDA</span>
         <span>PLUMBING &amp; HEATING</span>
@@ -45,21 +45,22 @@
 
 
 <main>
-
 <section class="section">
   <div class="container">
     <h1>Contact Us</h1>
     <p>Send us a message and we will reply as soon as possible.</p>
 
-    <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com" method="POST" class="contact-form">
+    <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com"
+          method="POST"
+          class="contact-form">
 
       <!-- Disable Captcha -->
       <input type="hidden" name="_captcha" value="false">
 
-      <!-- Success Redirect -->
-      <input type="hidden" name="_next" value="https://andromedaplumbingandheating.ca/thankyou.html">
+      <!-- Clean Redirect (NO query string!) -->
+      <input type="hidden" name="_redirect" value="https://andromedaplumbingandheating.ca/thankyou.html">
 
-      <!-- Better email layout -->
+      <!-- Use table email format -->
       <input type="hidden" name="_template" value="table">
 
       <label>Name</label>
@@ -80,7 +81,6 @@
 
   </div>
 </section>
-
 </main>
 
 
@@ -91,6 +91,7 @@
     <span>&copy; 2025 Andromeda Plumbing & Heating</span>
   </div>
 </footer>
+
 
 <script>
 (function() {
