@@ -2,107 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>About - Andromeda Plumbing &amp; Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode">
+<body>
+  <!-- HEADER (same as index) -->
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <div class="nav-brand">
+          <strong>ANDROMEDA</strong>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </div>
 
-<!-- SITE HEADER (same on all pages) -->
-<header class="site-header">
-  <div class="container header-inner">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-    <nav class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" />
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <a href="tel:7808879775">780-887-9775</a>
+        </div>
+        <div class="nav-location">Edmonton, AB</div>
       </div>
     </div>
+  </header>
 
-    <div class="header-right">
-      <div class="header-phone">
-        <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton & Area • 24/7</span>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>About Andromeda Plumbing &amp; Heating</h1>
+        <p>
+          Andromeda Plumbing &amp; Heating provides honest, code-compliant plumbing and heating service in Edmonton,
+          Alberta. One job at a time, done right.
+        </p>
       </div>
-      <div class="toggle-wrapper">
-        <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle"></button>
+    </section>
+
+    <section class="section">
+      <div class="container columns">
+        <article class="card">
+          <h3>Our Approach</h3>
+          <p>
+            Every call starts with clear communication. We explain what we see, what needs to be done, and what it will
+            cost before the work begins.
+          </p>
+          <ul class="list-check">
+            <li>Respect for your home and schedule.</li>
+            <li>Clean, organized work areas.</li>
+            <li>Repairs and installs that meet or exceed local code.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>What We Focus On</h3>
+          <p>
+            From emergency leaks to planned upgrades, we focus on long-term solutions rather than quick patch jobs.
+          </p>
+          <ul class="list-check">
+            <li>Plumbing repairs and fixture replacements.</li>
+            <li>Heating diagnostics and furnace service.</li>
+            <li>Hot water tank replacement and upgrades.</li>
+          </ul>
+        </article>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Andromeda Plumbing &amp; Heating. All rights reserved.</div>
+      <div>Serving Edmonton, Alberta &amp; surrounding area.</div>
     </div>
-
-  </div>
-</header>
-
-<main>
-
-  <section class="section">
-    <div class="container">
-      <h1>About Andromeda Plumbing & Heating</h1>
-
-      <p>
-        Andromeda Plumbing & Heating provides reliable, professional plumbing and heating
-        work for homeowners, landlords, and small businesses throughout Edmonton & area.
-        From emergency repairs to full system installations, every job is completed with
-        attention to detail, clean workmanship, and honest communication.
-      </p>
-
-      <p>
-        With years of hands-on experience, we service everything from leaking pipes and
-        frozen lines to furnace issues, hot water tank replacements, fixture installs,
-        gas line repairs, renovations, new construction and more.
-      </p>
-
-      <h2>Why Customers Choose Us</h2>
-
-      <ul>
-        <li>Clear explanations and honest recommendations</li>
-        <li>Clean, code-compliant installations</li>
-        <li>Fair pricing with no surprises</li>
-        <li>Fast response for emergency situations</li>
-        <li>Fully licensed & insured</li>
-      </ul>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <strong>Andromeda Plumbing & Heating</strong>
-    <span>Serving Edmonton and surrounding communities.</span>
-    <span>&copy; 2025 Andromeda Plumbing & Heating • Edmonton, Alberta</span>
-  </div>
-</footer>
-
-<script>
-(function() {
-  const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
-
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
-    body.classList.add('dark-mode');
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-    });
-  }
-})();
-</script>
-
+  </footer>
 </body>
 </html>
