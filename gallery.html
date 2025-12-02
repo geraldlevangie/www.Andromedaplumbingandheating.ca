@@ -1,108 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gallery | Andromeda Plumbing and Heating</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Gallery of past plumbing and heating work by Andromeda Plumbing and Heating in Edmonton, Alberta.">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Andromeda Plumbing & Heating</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="dark-mode">
 
-<!-- HEADER -->
-<header>
-  <div class="container nav">
-    <div class="nav-left">
-      <a href="index.html" class="logo-wrap">
-        <img src="assets/Andromeda.jpg" alt="Andromeda Plumbing and Heating logo" />
-        <div class="brand-text">
-          <span>ANDROMEDA</span>
-          <span>PLUMBING &amp; HEATING</span>
-        </div>
-      </a>
-    </div>
-
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="nav-contact">
-      <span class="nav-phone"><a href="tel:+17807822757">7808879775</a></span>
-      <span class="badge-24-7">Edmonton, AB</span>
-      <a href="tel:+17807822757" class="nav-cta">Call Now</a>
-    </div>
-  </div>
-</header>
-
-<!-- MAIN CONTENT -->
-<main>
-  <section class="section">
-    <div class="container">
-
-      <!-- Page Header -->
-      <header class="section-header">
-        <div class="section-kicker">Gallery</div>
-        <h1 class="section-title">Recent Projects</h1>
-        <p class="section-subtitle">
-          A showcase of high-quality plumbing and heating installations completed across Edmonton.
-        </p>
-      </header>
-
-      <!-- Gallery Grid -->
-      <div class="services-grid">
-
-        <div class="service-card">
-          <img src="assets/gallery/IMG_0325.JPG" alt="Boiler and hydronic heating system installation">
-          <h3 class="service-title">Boiler & Hydronic Heating</h3>
-          <p class="service-body">Clean, professional installation of a complete boiler and manifold system.</p>
+    <!-- NAVIGATION -->
+    <header class="nav-header">
+        <div class="nav-left">
+            <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" class="nav-logo">
+            <div class="brand-title">
+                <span class="brand-main">ANDROMEDA</span>
+                <span class="brand-sub">PLUMBING & HEATING</span>
+            </div>
         </div>
 
-        <div class="service-card">
-          <img src="assets/gallery/IMG_0461.JPG" alt="Laundry sink plumbing install">
-          <h3 class="service-title">Laundry Sink Installation</h3>
-          <p class="service-body">New double laundry sink with full plumbing hookup and clean finishing.</p>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html" class="active">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <span class="nav-phone">780-887-9775</span>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Recent Projects</h1>
+        <p>A showcase of professional plumbing & heating installations completed across Edmonton.</p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="gallery-grid">
+
+        <!-- PLACEHOLDER CARD -->
+        <div class="gallery-card">
+            <div class="gallery-image placeholder"></div>
+            <h3>Project Title</h3>
+            <p>Project description will appear here once images are uploaded.</p>
         </div>
 
-        <div class="service-card">
-          <img src="assets/gallery/IMG_0465.JPG" alt="Custom tiled shower with LED rain head">
-          <h3 class="service-title">Custom Shower Install</h3>
-          <p class="service-body">Luxury tiled shower featuring LED rain head & digital temperature controls.</p>
+        <div class="gallery-card">
+            <div class="gallery-image placeholder"></div>
+            <h3>Project Title</h3>
+            <p>Project description will appear here once images are uploaded.</p>
         </div>
 
-        <div class="service-card">
-          <img src="assets/gallery/IMG_0494.JPG" alt="Bathtub installation">
-          <h3 class="service-title">Bathtub Installation</h3>
-          <p class="service-body">Modern deep tub installed with precision and clean tile integration.</p>
+        <div class="gallery-card">
+            <div class="gallery-image placeholder"></div>
+            <h3>Project Title</h3>
+            <p>Project description will appear here once images are uploaded.</p>
         </div>
 
-      </div>
-    </div>
-  </section>
-</main>
+        <div class="gallery-card">
+            <div class="gallery-image placeholder"></div>
+            <h3>Project Title</h3>
+            <p>Project description will appear here once images are uploaded.</p>
+        </div>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-main">
-      <strong>Andromeda Plumbing and Heating</strong>
-      <span>Professional plumbing &amp; heating services in Edmonton, AB.</span>
-    </div>
+    </section>
 
-    <div class="footer-meta">
-      <span>&copy; <span id="year"></span> Andromeda Plumbing and Heating</span>
-      <span>Edmonton, Alberta</span>
-      <span><a href="mailto:AndromedaPlumbingAndHeating@gmail.com">AndromedaPlumbingAndHeating@gmail.com</a></span>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p><strong>Andromeda Plumbing and Heating</strong> — Professional plumbing & heating services in Edmonton, AB.</p>
+        <p>© 2025 Andromeda Plumbing and Heating — Edmonton, Alberta</p>
+    </footer>
 
 </body>
 </html>
