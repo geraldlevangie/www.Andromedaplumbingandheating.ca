@@ -4,15 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 
-<body class="dark-mode">
+<body>
 
-<!-- HEADER (SAME ON ALL PAGES) -->
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
+    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,14 +21,16 @@
       <a href="contact.html" class="active">Contact</a>
     </nav>
 
+    <!-- CENTER LOGO -->
     <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
       <div class="brand-text">
         <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
+        <span>PLUMBING & HEATING</span>
       </div>
     </div>
 
+    <!-- RIGHT SIDE -->
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
@@ -44,22 +47,26 @@
 </header>
 
 
-<main>
 
+<!-- ================= MAIN CONTENT ================= -->
+<main>
 <section class="section">
   <div class="container">
+
     <h1>Contact Us</h1>
     <p>Send us a message and we will reply as soon as possible.</p>
 
-    <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com" method="POST" class="contact-form">
+    <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com" 
+          method="POST" 
+          class="contact-form">
 
       <!-- Disable Captcha -->
       <input type="hidden" name="_captcha" value="false">
 
-      <!-- Success Redirect -->
+      <!-- Redirect to thank-you page -->
       <input type="hidden" name="_next" value="https://andromedaplumbingandheating.ca/thankyou.html">
 
-      <!-- Better email layout -->
+      <!-- Nicer email formatting -->
       <input type="hidden" name="_template" value="table">
 
       <label>Name</label>
@@ -75,15 +82,16 @@
       <textarea name="message" required placeholder="Describe the issue or project"></textarea>
 
       <button type="submit" class="btn-primary">Send Message</button>
-
     </form>
 
   </div>
 </section>
-
 </main>
 
 
+
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <strong>Andromeda Plumbing & Heating</strong>
@@ -92,16 +100,18 @@
   </div>
 </footer>
 
+
+<!-- ================= THEME TOGGLE SCRIPT ================= -->
 <script>
 (function() {
   const body = document.body;
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('themeMode');
 
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
+  if (saved === 'dark') {
     body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
   }
 
   toggle.addEventListener('click', () => {
