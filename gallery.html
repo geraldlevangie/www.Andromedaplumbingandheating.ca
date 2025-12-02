@@ -2,112 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gallery | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Gallery - Andromeda Plumbing &amp; Heating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="dark-mode">
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <div class="nav-brand">
+          <strong>ANDROMEDA</strong>
+          <span>PLUMBING &amp; HEATING</span>
+        </div>
+      </div>
 
-<header class="site-header">
-  <div class="container header-inner">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-    <nav class="nav-left">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" />
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <a href="tel:7808879775">780-887-9775</a>
+        </div>
+        <div class="nav-location">Edmonton, AB</div>
       </div>
     </div>
+  </header>
 
-    <div class="header-right">
-      <div class="header-phone">
-        <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton & Area • 24/7</span>
+  <main>
+    <section class="gallery-hero">
+      <div class="container">
+        <h1>Recent Projects</h1>
+        <p style="color: var(--text-soft); max-width: 36rem;">
+          A look at some of the plumbing and heating work completed around Edmonton and area.
+        </p>
       </div>
-      <div class="toggle-wrapper">
-        <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+    </section>
+
+    <section class="section">
+      <div class="container gallery-grid">
+        <!-- Replace image filenames with your own when ready -->
+        <article class="gallery-item">
+          <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating install" />
+          <div class="gallery-caption">
+            <h3>Boiler &amp; Hydronic Heating</h3>
+            <p>Clean boiler and manifold installation with neat piping and labeling.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="assets/IMG_0460.JPG" alt="Laundry sink installation" />
+          <div class="gallery-caption">
+            <h3>Laundry Sink Installation</h3>
+            <p>New laundry sink with full plumbing hookup and clean drain routing.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="assets/IMG_0465.JPG" alt="Custom shower installation" />
+          <div class="gallery-caption">
+            <h3>Custom Shower Install</h3>
+            <p>Tiled shower work with clean lines and properly protected fixtures.</p>
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="assets/IMG_0494.JPG" alt="Bathroom tub installation" />
+          <div class="gallery-caption">
+            <h3>Bathtub Installation</h3>
+            <p>Modern tub install with precision and clean tile integration.</p>
+          </div>
+        </article>
+
+        <!-- Add more items if you like -->
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Andromeda Plumbing &amp; Heating. All rights reserved.</div>
+      <div>Serving Edmonton, Alberta &amp; surrounding area.</div>
     </div>
-
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Recent Work</h2>
-        <p>A look at some of the plumbing and heating projects completed in Edmonton and area.</p>
-      </div>
-
-      <div class="gallery-grid">
-
-        <div class="gallery-item">
-          <img src="assets/IMG_0325.JPG" alt="Boiler & hydronic heating" />
-          <h3>Boiler &amp; Hydronic Heating</h3>
-          <p>Clean, organized hydronic heating system install.</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/IMG_0460.JPG" alt="Custom shower plumbing" />
-          <h3>Custom Shower</h3>
-          <p>Updated shower fixtures and plumbing for a modern bathroom.</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/IMG_0465.JPG" alt="Laundry sink install" />
-          <h3>Laundry Sink Install</h3>
-          <p>New laundry sinks with proper drain and supply lines.</p>
-        </div>
-
-        <div class="gallery-item">
-          <img src="assets/IMG_0494.JPG" alt="Bathtub and fixtures" />
-          <h3>Bathtub &amp; Fixtures</h3>
-          <p>New tub and fixture installation with tidy plumbing work.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <strong>Andromeda Plumbing &amp; Heating</strong>
-    <span>Serving Edmonton and surrounding communities.</span>
-    <span>&copy; 2025 Andromeda Plumbing &amp; Heating • Edmonton, Alberta</span>
-  </div>
-</footer>
-
-<script>
-(function() {
-  const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
-
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
-  } else {
-    body.classList.add('dark-mode');
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-    });
-  }
-})();
-</script>
-
+  </footer>
 </body>
 </html>
