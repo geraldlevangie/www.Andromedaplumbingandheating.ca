@@ -1,228 +1,256 @@
-/* =========================================
-   SHAMROCK GREEN THEME — CLEAN DARK SITE
-========================================= */
-
+/* ============================================================
+   THEME VARIABLES — LIGHT MODE (DEFAULT)
+   ============================================================ */
 :root {
-    --bg: #0b0b0b;           /* dark background */
-    --bg-light: #111;        /* slightly lighter panels */
-    --bg-card: #121212;      /* cards */
-    --text-main: #f0f0f0;
-    --text-soft: #a1a1a1;
-
-    --accent: #00C853;        /* SHAMROCK GREEN */
-    --accent-light: #1aff7a;  /* brighter hover version */
-
-    --border: #1d1d1d;
+    --bg: #ffffff;
+    --bg-panel: #f7f7f7;
+    --text-main: #111111;
+    --text-soft: #444444;
+    --accent: #04B97F;      /* SHAMROCK GREEN */
+    --accent-soft: #39dba0;
+    --border: #dcdcdc;
 }
 
+/* ============================================================
+   DARK MODE VARIABLES
+   Triggered when <body class="dark-mode">
+   ============================================================ */
+body.dark-mode {
+    --bg: #000000;
+    --bg-panel: #0e0e0e;
+    --text-main: #f1f1f1;
+    --text-soft: #bbbbbb;
+    --accent: #04B97F;
+    --accent-soft: #39dba0;
+    --border: #1a1a1a;
+}
 
-/* =========================================
+/* ============================================================
    GLOBAL
-========================================= */
-
+   ============================================================ */
 body {
     margin: 0;
-    font-family: system-ui, sans-serif;
+    padding: 0;
     background: var(--bg);
+    font-family: system-ui, Arial, sans-serif;
     color: var(--text-main);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
 
+a:hover {
+    color: var(--accent-soft);
+}
 
-/* =========================================
-   NAVIGATION BAR
-========================================= */
-
+/* ============================================================
+   HEADER + NAVIGATION
+   ============================================================ */
 header {
     width: 100%;
-    background: #0e0e0e;
-    padding: 14px 40px;
+    background: var(--bg);
+    padding: 16px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 10;
 }
 
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
 .nav-left img {
-    height: 54px;
+    height: 48px;
     width: auto;
 }
 
-.brand-text span:last-child {
-    color: var(--accent);
-}
-
 .nav-links a {
-    color: var(--text-soft);
+    margin-left: 22px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
+    font-weight: 500;
+    color: var(--text-main);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
+    border-bottom: 2px solid var(--accent);
     color: var(--accent);
-    border-bottom-color: var(--accent);
 }
 
-.nav-phone a {
-    color: var(--accent-light);
+/* ============================================================
+   TOGGLE SWITCH
+   ============================================================ */
+.toggle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
+.theme-toggle {
+    width: 45px;
+    height: 22px;
+    background: var(--border);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
 
+.theme-toggle::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
 
-/* =========================================
+body.dark-mode .theme-toggle::after {
+    transform: translateX(23px);
+}
+
+/* ============================================================
    HERO SECTION
-========================================= */
-
+   ============================================================ */
 .hero {
-    padding: 60px 50px;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    align-items: center;
+    padding: 60px 7%;
 }
 
-.call-now {
-    background: var(--accent);
-    color: black;
+.hero-left {
+    max-width: 480px;
 }
 
-.call-now:hover {
-    background: var(--accent-light);
+.call-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.quote {
-    background: transparent;
-    border: 1px solid var(--accent);
+.call-buttons a {
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 2px solid var(--accent);
     color: var(--accent);
+    font-weight: 600;
+    transition: 0.2s;
 }
 
-.quote:hover {
+.call-buttons a:hover {
     background: var(--accent);
     color: black;
 }
 
+/* Emergency Box */
 .emergency-box {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: var(--bg-panel);
     padding: 22px;
     border-radius: 12px;
-    width: 300px;
-    box-shadow: 0 0 12px rgba(0, 200, 83, 0.25);
+    border: 1px solid var(--border);
+    width: 320px;
+    color: var(--text-soft);
 }
 
+.emergency-box h3 {
+    margin-top: 0;
+    color: var(--text-main);
+}
 
-
-/* =========================================
+/* ============================================================
    SERVICES SECTION
-========================================= */
-
+   ============================================================ */
 .services {
-    padding: 40px 50px;
+    padding: 70px 7%;
     text-align: center;
 }
 
 .service-grid {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.service-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    padding: 20px;
-    border-radius: 16px;
-    transition: 0.2s ease;
-}
-
-.service-card:hover {
-    border-color: var(--accent);
-    box-shadow: 0 0 16px rgba(0, 200, 83, 0.35);
-}
-
-.service-card p {
-    color: var(--text-soft);
-}
-
-
-
-/* =========================================
-   GALLERY — FIXED IMAGE SIZES
-========================================= */
-
-.gallery-container {
-    padding: 40px 50px;
-}
-
-.gallery-grid {
+    margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 22px;
 }
 
-.gallery-item {
-    background: var(--bg-card);
+.service-card {
+    background: var(--bg-panel);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 12px;
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.2s ease;
 }
 
-.gallery-item img {
-    width: 100%;
-    max-height: 220px;    /* <<< NEW: limits size */
-    object-fit: cover;    /* <<< NEW: crops uniformly */
-    border-radius: 10px;
-}
-
-.gallery-item:hover {
+.service-card:hover {
     border-color: var(--accent);
-    box-shadow: 0 0 16px rgba(0, 200, 83, 0.35);
+    box-shadow: 0 0 12px rgba(4, 185, 127, 0.3);
 }
 
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 40px 7%;
+}
 
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: 0.2s;
+}
 
-/* =========================================
+.gallery-grid img:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 14px rgba(4,185,127,0.35);
+}
+
+/* ============================================================
    FOOTER
-========================================= */
-
-.site-footer {
-    margin-top: 60px;
-    background: #000;
-    padding: 26px 50px;
-    font-size: 0.85rem;
+   ============================================================ */
+footer {
+    padding: 40px;
+    background: var(--bg-panel);
     color: var(--text-soft);
+    border-top: 1px solid var(--border);
+    text-align: center;
 }
 
+footer strong {
+    color: var(--text-main);
+}
 
-
-/* =========================================
+/* ============================================================
    MOBILE FIXES
-========================================= */
-
+   ============================================================ */
 @media (max-width: 768px) {
-
     header {
         flex-direction: column;
-        gap: 10px;
+        gap: 14px;
+        padding: 20px;
     }
 
     .hero {
         flex-direction: column;
         text-align: center;
-    }
-
-    .emergency-box {
-        margin: 0 auto;
+        gap: 30px;
     }
 }
