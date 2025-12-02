@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Andromeda Plumbing & Heating</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | Andromeda Plumbing & Heating</title>
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
+<body class="dark-mode">
 
-<body>
+<header class="site-header">
+  <div class="container header-inner">
 
-<!-- ================= HEADER ================= -->
-<header>
-    <div class="nav-left">
-        <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" />
-        <div class="brand-text">
-            <span>ANDROMEDA</span>
-            <span>PLUMBING & HEATING</span>
-        </div>
-    </div>
-
-    <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+    <nav class="nav-left">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="nav-contact">
-        <span class="nav-phone"><a href="tel:7808879775">780-887-9775</a></span>
-        <span class="call-text">Serving Edmonton, AB</span>
+    <div class="logo-center">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" />
+      <div class="brand-text">
+        <span>ANDROMEDA</span>
+        <span>PLUMBING &amp; HEATING</span>
+      </div>
     </div>
+
+    <div class="header-right">
+      <div class="header-phone">
+        <a href="tel:7808879775">780-887-9775</a>
+        <span>Edmonton & Area • 24/7</span>
+      </div>
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+      </div>
+    </div>
+
+  </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-    <div class="hero-left">
-        <div class="call-buttons">
-            <a href="tel:7808879775" class="call-now">Call Now</a>
-            <a href="contact.html" class="quote">Get a Quote</a>
-        </div>
-        <p class="service-note">24/7 Emergency Service — Licensed & Insured — Edmonton & Area</p>
+<main>
+  <section class="page-section">
+    <div class="container">
+      <div class="content">
+        <p>
+          Andromeda Plumbing &amp; Heating provides professional plumbing and heating services
+          for homes and small businesses in Edmonton and the surrounding area.
+        </p>
+        <p>
+          From emergency calls to planned projects, the focus is always on clean work,
+          clear communication, and solutions that are built to last.
+        </p>
+
+        <ul class="list-check">
+          <li>Licensed and insured</li>
+          <li>24/7 emergency response for urgent issues</li>
+          <li>Friendly, respectful service in your home or business</li>
+          <li>Honest recommendations and fair pricing</li>
+        </ul>
+      </div>
     </div>
+  </section>
+</main>
 
-    <div class="hero-right">
-        <div class="emergency-box">
-            <h3>Emergency Services</h3>
-            <ul>
-                <li>Burst Pipes</li>
-                <li>Frozen Lines</li>
-                <li>No Heat</li>
-                <li>Flooding</li>
-            </ul>
-            <p class="emergency-call">Call 780-887-9775 for fast response.</p>
-            <span class="location-tag">Edmonton, AB</span>
-        </div>
-    </div>
-</section>
-
-<!-- ================= SERVICES ================= -->
-<section class="services">
-    <h2>Professional Plumbing & Heating</h2>
-    <p>Honest work. Clean installations. Code-compliant repairs.</p>
-
-    <div class="service-grid">
-        <div class="service-card">
-            <h4>Leaks, Clogs & Fixes</h4>
-            <p>Dripping faucets, blocked drains, running toilets, water pressure issues, and more.</p>
-        </div>
-
-        <div class="service-card">
-            <h4>Furnace & Heating</h4>
-            <p>Repairs, diagnostics, and installs for home heating systems.</p>
-        </div>
-
-        <div class="service-card">
-            <h4>Hot Water Tanks</h4>
-            <p>Emergency replacements and upgrades for all tank sizes.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-    <div class="footer-inner">
-        <div><strong>Andromeda Plumbing & Heating</strong></div>
-        <div class="footer-meta">
-            <span>&copy; 2025 Andromeda Plumbing & Heating</span>
-            <span>Edmonton, Alberta</span>
-            <span><a href="mailto:andromedaplumbingandheating@gmail.com">andromedaplumbingandheating@gmail.com</a></span>
-        </div>
-    </div>
+  <div class="container footer-inner">
+    <strong>Andromeda Plumbing &amp; Heating</strong>
+    <span>Serving Edmonton and surrounding communities.</span>
+    <span>&copy; 2025 Andromeda Plumbing &amp; Heating • Edmonton, Alberta</span>
+  </div>
 </footer>
+
+<script>
+(function() {
+  const body = document.body;
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('themeMode');
+
+  if (saved === 'light') {
+    body.classList.remove('dark-mode');
+  } else {
+    body.classList.add('dark-mode');
+  }
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
