@@ -1,80 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery | Andromeda Plumbing & Heating</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="dark-mode">
+<body>
 
-    <!-- NAVIGATION -->
-    <header class="nav-header">
-        <div class="nav-left">
-            <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" class="nav-logo">
-            <div class="brand-title">
-                <span class="brand-main">ANDROMEDA</span>
-                <span class="brand-sub">PLUMBING & HEATING</span>
-            </div>
+<!-- HEADER -->
+<header>
+    <div class="nav-left">
+        <img src="assets/AndromedaLogo1.png" alt="Andromeda Logo" />
+        <div class="brand-text">
+            <span>ANDROMEDA</span>
+            <span>PLUMBING & HEATING</span>
         </div>
+    </div>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a class="active" href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-        <div class="nav-right">
-            <span class="nav-phone">780-887-9775</span>
+    <div class="nav-contact">
+        <span class="nav-phone"><a href="tel:7808879775">780-887-9775</a></span>
+        <span class="call-text">Edmonton, AB</span>
+    </div>
+</header>
+
+
+<!-- ================= GALLERY GRID ================= -->
+<section class="gallery-container">
+    
+    <div class="gallery-grid">
+
+        <!-- AFTER YOU UPLOAD IMAGES, WE INSERT THEM LIKE THIS:
+        <div class="gallery-item">
+            <img src="assets/gallery/boiler.jpg" alt="Boiler Install" />
+            <h3>Boiler Install</h3>
+            <p>Clean modern hydronic heating install.</p>
         </div>
-    </header>
+        -->
 
-    <!-- PAGE INTRO -->
-    <section class="page-header">
-        <h1>Recent Projects</h1>
-        <p>A showcase of professional plumbing & heating installs completed across Edmonton.</p>
-    </section>
+        <p style="color:var(--text-soft); font-size:1rem;">
+            Upload your images and tell me the filenames — I will insert them into the gallery.
+        </p>
 
-    <!-- GALLERY GRID -->
-    <section class="gallery-grid">
+    </div>
 
-        <!-- CARD 1 -->
-        <div class="gallery-card">
-            <img src="assets/IMG_0325.JPG" class="gallery-image">
-            <h3>Boiler & Hydronic Heating System</h3>
-            <p>Professional installation of a complete boiler and manifold heating system.</p>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div><strong>Andromeda Plumbing & Heating</strong></div>
+        <div class="footer-meta">
+            <span>&copy; 2025 Andromeda Plumbing & Heating</span>
+            <span>Edmonton, Alberta</span>
+            <span><a href="mailto:andromedaplumbingandheating@gmail.com">andromedaplumbingandheating@gmail.com</a></span>
         </div>
-
-        <!-- CARD 2 -->
-        <div class="gallery-card">
-            <img src="assets/IMG_0460.JPG" class="gallery-image">
-            <h3>Custom Shower Install</h3>
-            <p>Luxury tiled shower with LED rain head and digital temperature control.</p>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="gallery-card">
-            <img src="assets/IMG_0465.JPG" class="gallery-image">
-            <h3>Laundry Sink Installation</h3>
-            <p>New double laundry sink with full plumbing hookup and clean finishing.</p>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="gallery-card">
-            <img src="assets/IMG_0494.JPG" class="gallery-image">
-            <h3>Modern Bathtub Installation</h3>
-            <p>Deep tub replacement with precision plumbing work and tile integration.</p>
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-        <p><strong>Andromeda Plumbing and Heating</strong> — Serving Edmonton, Alberta</p>
-        <p>© 2025 Andromeda Plumbing and Heating</p>
-    </footer>
+    </div>
+</footer>
 
 </body>
 </html>
