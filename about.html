@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>About | Andromeda Plumbing & Heating</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 
 <body class="dark-mode">
@@ -13,7 +13,6 @@
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
@@ -21,7 +20,6 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- CENTER LOGO -->
     <div class="logo-center">
       <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
       <div class="brand-text">
@@ -30,7 +28,6 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
@@ -66,8 +63,8 @@
 
       <p>
         Every job is approached with careful planning, clean workmanship, and respect for your home or workplace.
-        Whether it’s an emergency late-night call or a planned upgrade, the focus is on doing the work properly — not rushing
-        through a quick patch.
+        Whether it’s an emergency late-night call or a planned upgrade, the focus is on doing the work properly —
+        not rushing through a quick patch.
       </p>
 
       <p>
@@ -100,17 +97,17 @@
 </footer>
 
 
-<!-- ================= TOGGLE SCRIPT ================= -->
+<!-- ================= THEME TOGGLE SCRIPT ================= -->
 <script>
 (function() {
   const body = document.body;
   const toggle = document.getElementById("themeToggle");
   const saved = localStorage.getItem("themeMode");
 
-  if (saved === "light") {
-    body.classList.remove("dark-mode");
-  } else {
+  if (saved === "dark" || !saved) {
     body.classList.add("dark-mode");
+  } else {
+    body.classList.remove("dark-mode");
   }
 
   toggle.addEventListener("click", () => {
