@@ -13,7 +13,6 @@
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -21,9 +20,16 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- RIGHT PHONE ONLY -->
-    <div class="header-right header-phone-only">
-      <a href="tel:7808879775" class="header-phone-number">780-887-9775</a>
+    <div class="header-right">
+      <div class="header-phone">
+        <a href="tel:7808879775">780-887-9775</a>
+        <span>Edmonton &amp; Area • 24/7</span>
+      </div>
+
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle"></button>
+      </div>
     </div>
 
   </div>
@@ -38,7 +44,7 @@
 
       <div class="hero-main">
 
-        <!-- LOGO (Homepage only) -->
+        <!-- LOGO on homepage only -->
         <img src="assets/Andromedalogo.png" alt="Andromeda Plumbing & Heating logo" class="hero-logo" />
 
         <div class="hero-kicker">Plumbing & Heating • Edmonton, Alberta</div>
@@ -47,36 +53,25 @@
 
         <p class="hero-subtitle">
           Fast, reliable service for leaks, clogs, frozen lines, no-heat calls, hot water tanks and full system installs.
-          Clean work and honest communication from start to finish.
         </p>
 
         <div class="hero-actions">
-          <a href="tel:7808879775" class="btn btn-primary">Call 780-887-9775</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
-        </div>
-
-        <div class="hero-meta">
-          Licensed & insured • Serving Edmonton & surrounding communities
+          <a href="tel:7808879775" class="btn-primary">Call 780-887-9775</a>
+          <a href="#services" class="btn-secondary">View Services</a>
         </div>
 
       </div>
 
-      <div class="hero-side">
-        <aside class="hero-card">
-          <h3>24/7 Emergency Services</h3>
-          <p>Immediate help for urgent plumbing and heating issues:</p>
-          <ul>
-            <li>Burst or leaking pipes</li>
-            <li>Frozen or blocked lines</li>
-            <li>No heat / furnace failure</li>
-            <li>Hot water tank failures</li>
-          </ul>
-          <div class="hero-card-footer">
-            <span>Call <strong>780-887-9775</strong></span>
-            <span>Edmonton, AB</span>
-          </div>
-        </aside>
-      </div>
+      <aside class="hero-card">
+        <h3>24/7 Emergency Services</h3>
+        <p>Immediate help for urgent plumbing and heating issues:</p>
+        <ul>
+          <li>Burst or leaking pipes</li>
+          <li>Frozen or blocked lines</li>
+          <li>No heat / furnace failure</li>
+          <li>Hot water tank failures</li>
+        </ul>
+      </aside>
 
     </div>
   </section>
@@ -87,7 +82,7 @@
 
       <header class="section-header">
         <h2>Professional Plumbing & Heating</h2>
-        <p>Clean installations, careful diagnostics, and repairs that meet local code.</p>
+        <p>Clean installations and repairs that meet local code.</p>
       </header>
 
       <div class="services-grid">
@@ -95,62 +90,24 @@
         <article class="service-card">
           <h3>Leaks, Clogs & Fixes</h3>
           <p>
-            Dripping faucets, blocked drains, running toilets, water pressure issues, and other common
-            plumbing problems fixed quickly and neatly.
+            Dripping faucets, blocked drains, pressure issues, and other common plumbing problems fixed quickly and neatly.
           </p>
         </article>
 
         <article class="service-card">
           <h3>Heating & No-Heat Calls</h3>
           <p>
-            Diagnostics and repairs for furnaces and heating systems so your home stays warm and safe
-            through the winter.
+            Diagnostics and repairs for furnaces and heating systems to keep your home warm.
           </p>
         </article>
 
         <article class="service-card">
           <h3>Hot Water Tanks</h3>
           <p>
-            Emergency replacement and new installs for hot water tanks, sized and set up for your home
-            or small business.
+            Emergency replacement and new installs sized for your home or small business.
           </p>
         </article>
 
-      </div>
-
-    </div>
-  </section>
-
-
-  <section class="section">
-    <div class="container columns">
-
-      <div>
-        <div class="section-header" style="text-align:left; margin-bottom:1rem;">
-          <h2>Why Choose Andromeda</h2>
-          <p>Professional service with a focus on clean, reliable work.</p>
-        </div>
-
-        <ul class="list-check">
-          <li>Clear explanations and honest recommendations.</li>
-          <li>Fair pricing with no surprise add-ons.</li>
-          <li>Work done to local code requirements.</li>
-          <li>Respect for your home from start to finish.</li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="section-header" style="text-align:left; margin-bottom:1rem;">
-          <h2>Service Area</h2>
-          <p>Plumbing and heating service for Edmonton and surrounding communities.</p>
-        </div>
-
-        <ul class="list-check">
-          <li>Residential homes and condos.</li>
-          <li>Small commercial spaces and shops.</li>
-          <li>Renovations and upgrades.</li>
-          <li>New fixture installs and replacements.</li>
-        </ul>
       </div>
 
     </div>
@@ -167,18 +124,22 @@
   </div>
 </footer>
 
-
-<!-- DARK MODE SCRIPT (unchanged) -->
+<!-- THEME SCRIPT -->
 <script>
-(function() {
+(function(){
   const body = document.body;
+  const btn = document.getElementById("themeToggle");
   const saved = localStorage.getItem("themeMode");
 
-  if (saved === "dark" || !saved) {
-    body.classList.add("dark-mode");
-  } else {
-    body.classList.remove("dark-mode");
-  }
+  if (saved === "light") body.classList.remove("dark-mode");
+  if (body.classList.contains("dark-mode")) btn.classList.add("is-dark");
+
+  btn.addEventListener("click", ()=>{
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    btn.classList.toggle("is-dark", isDark);
+    localStorage.setItem("themeMode", isDark ? "dark" : "light");
+  });
 })();
 </script>
 
