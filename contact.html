@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=20250213" />
 </head>
 
 <body class="dark-mode">
@@ -13,6 +13,7 @@
 <header class="site-header">
   <div class="container header-inner">
 
+    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,102 +21,79 @@
       <a href="contact.html" class="active">Contact</a>
     </nav>
 
-    <div class="logo-center">
-      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING & HEATING</span>
-      </div>
-    </div>
-
-    <div class="header-right">
-      <div class="header-phone">
-        <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton & Area • 24/7</span>
-      </div>
-
-      <div class="toggle-wrapper">
-        <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle"></button>
-      </div>
+    <!-- RIGHT PHONE ONLY -->
+    <div class="header-right header-phone-only">
+      <a href="tel:7808879775" class="header-phone-number">780-887-9775</a>
     </div>
 
   </div>
 </header>
 
 
-
 <!-- ================= MAIN CONTENT ================= -->
 <main>
-<section class="section">
-  <div class="container">
 
-    <h1>Contact Us</h1>
-    <p>Send us a message and we will reply as soon as possible.</p>
+  <section class="section">
+    <div class="container">
 
-    <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com" 
-          method="POST" 
-          class="contact-form">
+      <h1>Contact Us</h1>
+      <p>Send us a message and we will reply as soon as possible.</p>
 
-      <!-- Disable Captcha -->
-      <input type="hidden" name="_captcha" value="false">
+      <form action="https://formsubmit.co/AndromedaPlumbingAndHeating@gmail.com"
+            method="POST"
+            class="contact-form">
 
-      <!-- Redirect to thank-you page -->
-      <input type="hidden" name="_next" value="https://andromedaplumbingandheating.ca/thankyou.html">
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false" />
 
-      <!-- Nicer email formatting -->
-      <input type="hidden" name="_template" value="table">
+        <!-- Redirect After Submit -->
+        <input type="hidden" name="_next" value="https://andromedaplumbingandheating.ca/thankyou.html" />
 
-      <label>Name</label>
-      <input type="text" name="name" required placeholder="Your name">
+        <!-- Email Formatting -->
+        <input type="hidden" name="_template" value="table" />
 
-      <label>Phone</label>
-      <input type="text" name="phone" required placeholder="Best number to reach you">
+        <label>Name</label>
+        <input type="text" name="name" required placeholder="Your name" />
 
-      <label>Email (optional)</label>
-      <input type="email" name="email" placeholder="your@email.com">
+        <label>Phone</label>
+        <input type="text" name="phone" required placeholder="Best number to reach you" />
 
-      <label>How can we help?</label>
-      <textarea name="message" required placeholder="Describe the issue or project"></textarea>
+        <label>Email (optional)</label>
+        <input type="email" name="email" placeholder="your@email.com" />
 
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+        <label>How can we help?</label>
+        <textarea name="message" required placeholder="Describe the issue or project"></textarea>
 
-  </div>
-</section>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
 </main>
-
 
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <strong>Andromeda Plumbing & Heating</strong>
-    <span>Serving Edmonton and surrounding communities.</span>
-    <span>&copy; 2025 Andromeda Plumbing & Heating</span>
+    <div><strong>Andromeda Plumbing & Heating</strong></div>
+    <div>Serving Edmonton and surrounding communities.</div>
+    <div>&copy; 2025 Andromeda Plumbing & Heating</div>
   </div>
 </footer>
 
 
-
-<!-- ================= THEME TOGGLE SCRIPT ================= -->
+<!-- DARK MODE SCRIPT -->
 <script>
 (function() {
   const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
+  const saved = localStorage.getItem("themeMode");
 
-  if (saved === 'dark' || !saved) {
-    body.classList.add('dark-mode');
+  if (saved === "dark" || !saved) {
+    body.classList.add("dark-mode");
   } else {
-    body.classList.remove('dark-mode');
+    body.classList.remove("dark-mode");
   }
-
-  toggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-  });
 })();
 </script>
 
