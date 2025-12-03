@@ -13,7 +13,6 @@
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -21,9 +20,16 @@
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- RIGHT PHONE ONLY -->
-    <div class="header-right header-phone-only">
-      <a href="tel:7808879775" class="header-phone-number">780-887-9775</a>
+    <div class="header-right">
+      <div class="header-phone">
+        <a href="tel:7808879775">780-887-9775</a>
+        <span>Edmonton &amp; Area • 24/7</span>
+      </div>
+
+      <div class="toggle-wrapper">
+        <span>Light / Dark</span>
+        <button id="themeToggle" class="theme-toggle"></button>
+      </div>
     </div>
 
   </div>
@@ -36,46 +42,48 @@
   <section class="page-hero">
     <div class="container">
       <h1>Recent Work</h1>
-      <p>A look at some plumbing and heating projects around Edmonton and area.</p>
+      <p>Professional plumbing and heating installations in Edmonton and surrounding areas.</p>
     </div>
   </section>
 
   <section class="page-section">
-    <div class="container gallery-grid">
+    <div class="container modern-gallery">
 
-      <!-- Restored to your original sizes and order -->
-
-      <article class="gallery-item">
-        <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating install" />
-        <div class="gallery-caption">
+      <!-- Image 1 -->
+      <div class="gallery-card">
+        <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating system" />
+        <div class="gallery-info">
           <h3>Boiler & Hydronic Heating</h3>
-          <p>Clean, organized boiler and manifold installation.</p>
+          <p>Clean, organized boiler installation with reliable distribution system.</p>
         </div>
-      </article>
+      </div>
 
-      <article class="gallery-item">
-        <img src="assets/IMG_0460.JPG" alt="Custom shower installation" />
-        <div class="gallery-caption">
-          <h3>Custom Shower</h3>
-          <p>Updated shower fixtures and plumbing for a modern bathroom.</p>
+      <!-- Image 2 -->
+      <div class="gallery-card">
+        <img src="assets/IMG_0460.JPG" alt="Custom shower system install" />
+        <div class="gallery-info">
+          <h3>Custom Shower Installation</h3>
+          <p>Updated fixtures and precise plumbing layout for a modern bathroom.</p>
         </div>
-      </article>
+      </div>
 
-      <article class="gallery-item">
+      <!-- Image 3 -->
+      <div class="gallery-card">
         <img src="assets/IMG_0465.JPG" alt="Laundry sink installation" />
-        <div class="gallery-caption">
-          <h3>Laundry Sink</h3>
-          <p>New sink and drains installed with tidy piping.</p>
+        <div class="gallery-info">
+          <h3>Laundry Sink Upgrade</h3>
+          <p>New sink and drain install with clean, tidy piping work.</p>
         </div>
-      </article>
+      </div>
 
-      <article class="gallery-item">
-        <img src="assets/IMG_0494.JPG" alt="Bathtub and fixtures" />
-        <div class="gallery-caption">
-          <h3>Bathtub & Fixtures</h3>
-          <p>New tub and fixture install with clean tie-in.</p>
+      <!-- Image 4 -->
+      <div class="gallery-card">
+        <img src="assets/IMG_0494.JPG" alt="Bathtub and fixture installation" />
+        <div class="gallery-info">
+          <h3>Bathtub & Fixture Install</h3>
+          <p>New tub, valves and drain assembly installed to code.</p>
         </div>
-      </article>
+      </div>
 
     </div>
   </section>
@@ -92,17 +100,29 @@
 </footer>
 
 
-<!-- DARK MODE SCRIPT -->
+<!-- THEME SCRIPT -->
 <script>
 (function() {
   const body = document.body;
-  const saved = localStorage.getItem("themeMode");
+  const toggle = document.getElementById('themeToggle');
+  const saved = localStorage.getItem('themeMode');
 
-  if (saved === "dark" || !saved) {
-    body.classList.add("dark-mode");
+  if (saved === 'light') {
+    body.classList.remove('dark-mode');
   } else {
-    body.classList.remove("dark-mode");
+    body.classList.add('dark-mode');
   }
+
+  if (body.classList.contains('dark-mode')) {
+    toggle.classList.add('is-dark');
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    toggle.classList.toggle('is-dark', isDark);
+    localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
+  });
 })();
 </script>
 
