@@ -4,16 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Andromeda Plumbing & Heating</title>
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 
-<body>
+<body class="dark-mode">
 
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- LEFT NAV -->
     <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -21,7 +20,6 @@
       <a href="contact.html" class="active">Contact</a>
     </nav>
 
-    <!-- CENTER LOGO -->
     <div class="logo-center">
       <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
       <div class="brand-text">
@@ -30,7 +28,6 @@
       </div>
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
@@ -90,7 +87,6 @@
 
 
 
-
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
@@ -101,6 +97,7 @@
 </footer>
 
 
+
 <!-- ================= THEME TOGGLE SCRIPT ================= -->
 <script>
 (function() {
@@ -108,7 +105,7 @@
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('themeMode');
 
-  if (saved === 'dark') {
+  if (saved === 'dark' || !saved) {
     body.classList.add('dark-mode');
   } else {
     body.classList.remove('dark-mode');
@@ -124,28 +121,3 @@
 
 </body>
 </html>
-/* CONTACT PAGE FIXES */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.btn-primary {
-  padding: 14px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  background: #0b6623;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: #0e7a2a;
-}
-
