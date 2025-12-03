@@ -39,72 +39,84 @@
 <!-- ================= MAIN CONTENT ================= -->
 <main>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container hero-inner">
 
-      <div class="hero-main">
+      <div class="hero-left">
+        <img src="assets/Andromedalogo.png"
+             alt="Andromeda Plumbing & Heating logo"
+             class="hero-logo" />
 
-        <!-- LOGO on homepage only -->
-        <img src="assets/Andromedalogo.png" alt="Andromeda Plumbing & Heating logo" class="hero-logo" />
+        <p class="hero-kicker">Plumbing &amp; Heating • Edmonton &amp; Area</p>
 
-        <div class="hero-kicker">Plumbing & Heating • Edmonton, Alberta</div>
-
-        <h1 class="hero-title">Professional Plumbing & Heating Services</h1>
+        <h1 class="hero-title">Reliable Plumbing &amp; Heating Services</h1>
 
         <p class="hero-subtitle">
-          Fast, reliable service for leaks, clogs, frozen lines, no-heat calls, hot water tanks and full system installs.
+          24/7 emergency service for leaks, clogs, no-heat calls, hot water tanks and more.
+          Clean, professional work with honest communication from start to finish.
         </p>
 
-        <div class="hero-actions">
-          <a href="tel:7808879775" class="btn-primary">Call 780-887-9775</a>
-          <a href="#services" class="btn-secondary">View Services</a>
+        <div class="hero-badges">
+          <span>24/7 Emergency Service</span>
+          <span>Licensed &amp; Insured</span>
+          <span>Residential &amp; Light Commercial</span>
         </div>
 
+        <div class="hero-cta-row">
+          <a href="tel:7808879775" class="btn-primary hero-cta-main">Call 780-887-9775</a>
+          <a href="#services" class="btn-secondary hero-cta-secondary">View Services</a>
+        </div>
       </div>
 
-      <aside class="hero-card">
-        <h3>24/7 Emergency Services</h3>
-        <p>Immediate help for urgent plumbing and heating issues:</p>
+      <aside class="hero-right-card">
+        <h3>Need Help Right Now?</h3>
+        <p>If you’re dealing with a leak, no heat, or a failed hot water tank, call any time.</p>
         <ul>
           <li>Burst or leaking pipes</li>
           <li>Frozen or blocked lines</li>
-          <li>No heat / furnace failure</li>
+          <li>No-heat furnace issues</li>
           <li>Hot water tank failures</li>
         </ul>
+        <a href="tel:7808879775" class="hero-card-call">Call Now</a>
       </aside>
 
     </div>
   </section>
 
 
-  <section id="services" class="section alt">
+  <!-- SERVICES SECTION -->
+  <section id="services" class="section home-services">
     <div class="container">
 
       <header class="section-header">
-        <h2>Professional Plumbing & Heating</h2>
-        <p>Clean installations and repairs that meet local code.</p>
+        <h2>Plumbing &amp; Heating Services</h2>
+        <p>Professional service for homes and small businesses in Edmonton and surrounding areas.</p>
       </header>
 
       <div class="services-grid">
 
         <article class="service-card">
-          <h3>Leaks, Clogs & Fixes</h3>
+          <h3>Plumbing Repairs</h3>
           <p>
-            Dripping faucets, blocked drains, pressure issues, and other common plumbing problems fixed quickly and neatly.
+            Leaks, clogs, toilets, faucets, and general plumbing issues
+            diagnosed and repaired with clean, code-compliant work.
           </p>
         </article>
 
         <article class="service-card">
-          <h3>Heating & No-Heat Calls</h3>
+          <h3>Heating &amp; No-Heat Calls</h3>
           <p>
-            Diagnostics and repairs for furnaces and heating systems to keep your home warm.
+            Troubleshooting and repairs for furnaces and heating systems
+            to keep your home safe and comfortable through the winter.
           </p>
         </article>
 
         <article class="service-card">
           <h3>Hot Water Tanks</h3>
           <p>
-            Emergency replacement and new installs sized for your home or small business.
+            Replacement and new installations for hot water tanks sized
+            properly for your home or small business.
           </p>
         </article>
 
@@ -113,35 +125,15 @@
     </div>
   </section>
 
-</main>
 
+  <!-- FEATURED PROJECTS TEASER -->
+  <section class="section home-gallery-preview">
+    <div class="container">
 
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>© 2025 Andromeda Plumbing & Heating</div>
-    <div>Edmonton, Alberta • 24/7 emergency service</div>
-  </div>
-</footer>
+      <header class="section-header">
+        <h2>Recent Work</h2>
+        <p>A few examples of plumbing and heating projects completed around Edmonton.</p>
+      </header>
 
-<!-- THEME SCRIPT -->
-<script>
-(function(){
-  const body = document.body;
-  const btn = document.getElementById("themeToggle");
-  const saved = localStorage.getItem("themeMode");
-
-  if (saved === "light") body.classList.remove("dark-mode");
-  if (body.classList.contains("dark-mode")) btn.classList.add("is-dark");
-
-  btn.addEventListener("click", ()=>{
-    body.classList.toggle("dark-mode");
-    const isDark = body.classList.contains("dark-mode");
-    btn.classList.toggle("is-dark", isDark);
-    localStorage.setItem("themeMode", isDark ? "dark" : "light");
-  });
-})();
-</script>
-
-</body>
-</html>
+      <div class="home-gallery-grid">
+        <div class="home-gallery-ite
