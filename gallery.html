@@ -2,46 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Gallery | Andromeda Plumbing &amp; Heating</title>
+  <title>Gallery | Andromeda Plumbing & Heating</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
+
 <body class="dark-mode">
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <div class="header-left">
-      <div class="header-logo">
-        <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating logo" />
-      </div>
-      <div class="brand-text">
-        <span>ANDROMEDA</span>
-        <span>PLUMBING &amp; HEATING</span>
-      </div>
-    </div>
-
-    <nav class="nav-links">
+    <nav class="nav-left">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="gallery.html" class="active">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
 
+    <div class="logo-center">
+      <img src="assets/AndromedaLogo1.png" alt="Andromeda Plumbing & Heating" class="header-logo">
+      <div class="brand-text">
+        <span>ANDROMEDA</span>
+        <span>PLUMBING & HEATING</span>
+      </div>
+    </div>
+
     <div class="header-right">
       <div class="header-phone">
         <a href="tel:7808879775">780-887-9775</a>
-        <span>Edmonton &amp; Area • 24/7</span>
+        <span>Edmonton & Area • 24/7</span>
       </div>
+
       <div class="toggle-wrapper">
         <span>Light / Dark</span>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"></button>
+        <button id="themeToggle" class="theme-toggle"></button>
       </div>
     </div>
 
   </div>
 </header>
 
+
+<!-- ================= MAIN CONTENT ================= -->
 <main>
+
   <section class="page-hero">
     <div class="container">
       <h1>Recent Work</h1>
@@ -51,11 +56,11 @@
 
   <section class="page-section">
     <div class="container gallery-grid">
-      <!-- You can change these filenames as you update your photos -->
+
       <article class="gallery-item">
         <img src="assets/IMG_0325.JPG" alt="Boiler and hydronic heating install" />
         <div class="gallery-caption">
-          <h3>Boiler &amp; Hydronic Heating</h3>
+          <h3>Boiler & Hydronic Heating</h3>
           <p>Clean, organized boiler and manifold installation.</p>
         </div>
       </article>
@@ -79,41 +84,46 @@
       <article class="gallery-item">
         <img src="assets/IMG_0494.JPG" alt="Bathtub and fixtures" />
         <div class="gallery-caption">
-          <h3>Bathtub &amp; Fixtures</h3>
+          <h3>Bathtub & Fixtures</h3>
           <p>New tub and fixture install with clean tie-in.</p>
         </div>
       </article>
+
     </div>
   </section>
+
 </main>
 
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div>© 2025 Andromeda Plumbing &amp; Heating</div>
+    <div>© 2025 Andromeda Plumbing & Heating</div>
     <div>Edmonton, Alberta • 24/7 emergency service</div>
   </div>
 </footer>
 
+
+<!-- ================= THEME TOGGLE SCRIPT ================= -->
 <script>
 (function() {
   const body = document.body;
-  const toggle = document.getElementById('themeToggle');
-  const saved = localStorage.getItem('themeMode');
+  const toggle = document.getElementById("themeToggle");
+  const saved = localStorage.getItem("themeMode");
 
-  if (saved === 'light') {
-    body.classList.remove('dark-mode');
+  if (saved === "dark" || !saved) {
+    body.classList.add("dark-mode");
   } else {
-    body.classList.add('dark-mode');
+    body.classList.remove("dark-mode");
   }
 
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      const isDark = body.classList.contains('dark-mode');
-      localStorage.setItem('themeMode', isDark ? 'dark' : 'light');
-    });
-  }
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    localStorage.setItem("themeMode", isDark ? "dark" : "light");
+  });
 })();
 </script>
+
 </body>
 </html>
